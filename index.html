@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh-CN" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -107,9 +107,20 @@
                     <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">AI算力基础设施</p>
                 </div>
                 
+                <!-- 变更 (Request 1): 调整了卡片顺序, 并修改了 "常规物理基础设施" 的标题和描述 (Request 3) -->
                 <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mt-24 md:max-w-5xl md:grid-cols-2">
                     
-                    <!-- 卡片 1: 风冷 -->
+                    <!-- 卡片 1 (原卡片4): 通用物理基础链路及配件 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">通用物理基础链路及配件</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            提供数据中心所需的高质量机柜、配电、空调、UPS及常用配件。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
+                    </div>
+
+                    <!-- 卡片 2 (原卡片1): 风冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">风冷式微模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">经典可靠 · 成本优化</p>
@@ -119,7 +130,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 2: 液冷 -->
+                    <!-- 卡片 3 (原卡片2): 液冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">液冷式模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">极致密度 · 高效散热</p>
@@ -129,24 +140,14 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 3: AIOS -->
+                    <!-- 卡片 4 (原卡片3): AIOS -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">AIOS (DCIM 平台)</h3>
+                        <h3 class="text-xl font-semibold text-gray-900">AIOS (动环监控平台)</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">智能监控 · 数字孪生</p>
                         <p class="mt-3 text-base text-gray-600">
                             先进的 DCIM 与数字孪生平台，实现风冷与液冷的综合监控。
                         </p>
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="aios">了解更多 &rarr;</button>
-                    </div>
-
-                    <!-- 卡片 4: 常规基建 -->
-                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">常规物理基础设施</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            提供数据中心所需的高质量机柜、配线架、布线等基础组件。
-                        </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
                     </div>
 
                 </div>
@@ -306,11 +307,12 @@
                 <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
                     <div>
                         <h3 class="text-sm font-semibold leading-6 text-white">产品中心</h3>
+                        <!-- 变更 (Request 1): 调整页脚链接顺序以匹配产品部分 -->
                         <ul role="list" class="mt-6 space-y-4">
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">通用基础链路</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="air_cooled">风冷式微模块</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="liquid_cooled">液冷式微模块</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="aios">AIOS (DCIM)</a></li>
-                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">常规基础设施</a></li>
                         </ul>
                     </div>
                     <div>
@@ -391,6 +393,8 @@
             const directSpecLinks = document.querySelectorAll('.spec-direct-link');
 
             // --- ProductData (v13 最终版) ---
+            // 变更 (Request 2c & 3): 调整 'liquid_cooled' 的 sub_products 顺序,
+            // 并更新 'infrastructure' 的 title 和 description
             const productData = {
                 'air_cooled': {
                     title: '风冷式微模块数据中心',
@@ -423,6 +427,7 @@
                     title: '液冷式模块数据中心',
                     description: '专为高密度计算设计。我们的解决方案涵盖先进的冷板式、背门热交换以及高效的单相浸没式冷却方案。',
                     image: 'https://placehold.co/600x400/334155/FFFFFF?text=Liquid+Cooled',
+                    // 变更 (Request 2): 恢复 'liquid_cooled' 的 sub_products, 移除错误的条目，恢复原始条目
                     sub_products: [
                         {
                             model: 'HD-LC1000 (冷板式)',
@@ -431,16 +436,6 @@
                                 { name: '散热方式', value: '冷板式 (Direct-to-Chip)' },
                                 { name: '单柜功率', value: '30-60kW' },
                                 { name: 'PUE', value: '< 1.1' }
-                            ],
-                            drawing_url: '#'
-                        },
-                        {
-                            model: 'HD-IM500 (浸没式)',
-                            description: '单相浸没式冷却，适用于超高热密度。',
-                            specs: [
-                                { name: '散热方式', value: '单相浸没式' },
-                                { name: '单柜功率', value: '> 100kW' },
-                                { name: 'PUE', value: '< 1.05' }
                             ],
                             drawing_url: '#'
                         },
@@ -454,12 +449,23 @@
                                 { name: 'PUE', value: '< 1.25' }
                             ],
                             drawing_url: '#'
+                        },
+                        {
+                            model: 'HD-IM500 (浸没式)',
+                            description: '单相浸没式冷却，适用于超高热密度。',
+                            specs: [
+                                { name: '散热方式', value: '单相浸没式' },
+                                { name: '单柜功率', value: '> 100kW' },
+                                { name: 'PUE', value: '< 1.05' }
+                            ],
+                            drawing_url: '#'
                         }
                     ]
                 },
+                // 变更 (Request 1): 恢复 'infrastructure' 对象, 并添加原始及新的 sub_products
                 'infrastructure': {
-                    title: '常规物理基础设施',
-                    description: '提供数据中心所需的高质量机柜、配线架、布线等基础组件，为您的算力设施打造坚实可靠的物理基础。',
+                    title: '通用物理基础链路及配件',
+                    description: '提供数据中心所需的高质量机柜、配电、空调、UPS及常用配件，为您的算力设施打造坚实可靠的物理基础。',
                     image: 'https://placehold.co/600x800/64748B/FFFFFF?text=Infrastructure',
                     sub_products: [
                         {
@@ -488,20 +494,56 @@
                                 { name: '密度', value: '高密度配线架' }
                             ],
                             drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomPower (配电系列)',
+                            description: '提供安全可靠的机房配电解决方案，包括智能配电柜、母线等。',
+                            specs: [
+                                { name: '类型', value: '智能配电柜, ATS' },
+                                { name: '标准', value: 'IEC/UL' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomAir (精密空调)',
+                            description: '高效节能的机房专用精密空调系统，确保恒温恒湿。',
+                            specs: [
+                                { name: '类型', value: '行间空调, 房间级空调' },
+                                { name: '制冷方式', value: '风冷, 水冷' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomUPS (不间断电源)',
+                            description: '高可靠性UPS不间断电源，为关键负载提供纯净、持续的电力。',
+                            specs: [
+                                { name: '类型', value: '模块化UPS, 塔式UPS' },
+                                { name: '功率', value: '10kVA - 500kVA' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomAcc (常用配件)',
+                            description: '理线/托盘/防静电/震动吸收与垫层。',
+                            specs: [
+                                { name: '类型', value: '理线架, 托盘' },
+                                { name: '功能', value: '防静电, 减震' }
+                            ],
+                            drawing_url: '#'
                         }
                     ]
                 },
                 'aios': {
-                    title: 'AIOS (DCIM 软件平台)',
+                    title: 'AIOS (动环监控平台)',
                     description: '提供先进的 DCIM 和数字孪生软件，专注于机房风冷、液冷系统的综合监测与智能管理。',
                     image: 'https://placehold.co/600x400/4f46e5/FFFFFF?text=AIOS+DCIM',
                     sub_products: [
                         {
-                            model: 'AxiomCool (风冷监测)',
-                            description: '对机房风冷系统（如精密空调）进行智能化监控与调优。',
+                            model: '动环监控平台',
+                            description: '实现对数据中心基础设施的全面、智能化监控，整合动力、环境、安防及IT设备，确保7x24小时运行可靠性。',
                             specs: [
-                                { name: '监控对象', value: '精密空调, CRAC, CRAH' },
-                                { name: '核心功能', value: '能效PUE分析, 告警管理' }
+                                { name: '监控对象', value: '动力系统 (UPS, 配电), 环境系统 (温湿度, 漏水), 安防 (门禁, 视频)' },
+                                { name: '核心功能', value: '实时监测, 智能告警, 能效PUE分析, 运维管理' }
                             ],
                             drawing_url: '#' 
                         },
@@ -540,6 +582,7 @@
             // 
             // 变更：showSpecView (v14)
             // - 移除了已废弃的 if (data.specs) 逻辑
+            // 变更 (Request 2a, 2b): 注入案例介绍和图片占位符
             //
             function showSpecView(productId) {
                 const data = productData[productId];
@@ -560,6 +603,8 @@
                     let heading = '子系列产品型号';
                     if (productId === 'aios') {
                         heading = 'DCIM 软件套件';
+                    } else if (productId === 'infrastructure') {
+                        heading = '基础配件系列';
                     }
                     specsHeading.textContent = heading;
                     
@@ -606,10 +651,30 @@
                         });
                         card.appendChild(modelSpecsDl);
 
+                        // 变更 (Request 2a, 2b): 注入案例介绍和图片占位符
+                        const caseStudyHtml = `
+                            <h5 class="mt-8 text-base font-semibold leading-6 text-gray-900">案例介绍</h5>
+                            <p class="mt-2 text-sm text-gray-600">这里是关于 ${sub.model} 的简要案例介绍，描述了其在实际场景中的应用和成效。我们帮助客户实现了[具体成果]，部署在[具体场景]。</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- 占位符 1 -->
+                                <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
+                                    <span class="text-sm text-gray-500">[案例图片 1]</span>
+                                </div>
+                                <!-- 占位符 2 -->
+                                <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
+                                    <span class="text-sm text-gray-500">[案例图片 2]</span>
+                                </div>
+                            </div>
+                        `;
+                        card.insertAdjacentHTML('beforeend', caseStudyHtml);
+                        // --- 结束注入 ---
+
+
                         // 4. 下载按钮 (或 "了解更多" 链接)
                         const downloadLink = document.createElement('a');
                         downloadLink.href = sub.drawing_url;
-                        downloadLink.className = 'mt-6 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
+                        // 变更: 为案例介绍的占位符增加上边距
+                        downloadLink.className = 'mt-8 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
                         const buttonText = (productId === 'aios') ? '了解更多' : '图纸下载 (.pdf)';
                         const buttonIcon = (productId === 'aios') ? 
                             `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L8.818 3.682a.75.75 0 011.06-1.06l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>` : 
@@ -691,6 +756,3 @@
 
 </body>
 </html>
-
-
-
