@@ -110,27 +110,17 @@
                 <!-- 变更 (Request 1): 调整了卡片顺序, 并修改了 "常规物理基础设施" 的标题和描述 (Request 3) -->
                 <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mt-24 md:max-w-5xl md:grid-cols-2">
                     
-                    <!-- 新增卡片 1: OCP ORV3 -->
+                    <!-- 新增卡片 1: OCP 核心解决方案 (取代 ORV2 和 ORV3) -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">OCP ORV3 核心产品</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 48V直流 · AI液冷集成</p>
+                        <h3 class="text-xl font-semibold text-gray-900">OCP 核心解决方案</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 直流供电 · OCP标准</p>
                         <p class="mt-3 text-base text-gray-600">
-                            采用OCP 21英寸标准，配备48V后置直流母线供电，专为整机柜液冷集成和高密度AI计算设计。
+                            提供从机架、母线到电源壳体的OCP标准组件，支持ORV3 (48V)和ORV2 (12V)架构。
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_orv3">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_solutions">了解更多 &rarr;</button>
                     </div>
 
-                    <!-- 新增卡片 2: OCP ORV2 -->
-                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">OCP ORV2 核心产品</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 12V双区 · OCP标准</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            符合OCP 21英寸导轨，具备12V双区直流母线，支持模块化电源与高空间利用率，适用于超大规模数据中心。
-                        </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_orv2">了解更多 &rarr;</button>
-                    </div>
-
-                    <!-- 卡片 3 (原卡片1): 通用物理基础链路及配件 -->
+                    <!-- 卡片 2: 通用物理基础链路及配件 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">通用物理基础链路及配件</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
@@ -140,7 +130,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
                     </div>
 
-                    <!-- 卡片 4 (原卡片2): 风冷 -->
+                    <!-- 卡片 3: 风冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">风冷式微模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">经典可靠 · 成本优化</p>
@@ -150,7 +140,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 5 (原卡片3): 液冷 -->
+                    <!-- 卡片 4: 液冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">液冷式模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">极致密度 · 高效散热</p>
@@ -160,7 +150,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 6 (原卡片4): AIOS -->
+                    <!-- 卡片 5: AIOS -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">AIOS (动环监控平台)</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">智能监控 · 数字孪生</p>
@@ -327,10 +317,9 @@
                 <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
                     <div>
                         <h3 class="text-sm font-semibold leading-6 text-white">产品中心</h3>
-                        <!-- 变更: 添加 OCP 链接 -->
+                        <!-- 变更: 添加 OCP 链接, 移除旧链接 -->
                         <ul role="list" class="mt-6 space-y-4">
-                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_orv3">OCP ORV3</a></li>
-                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_orv2">OCP ORV2</a></li>
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_solutions">OCP 解决方案</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">通用基础链路</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="air_cooled">风冷式微模块</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="liquid_cooled">液冷式微模块</a></li>
@@ -415,46 +404,66 @@
             const directSpecLinks = document.querySelectorAll('.spec-direct-link');
 
             // --- ProductData ---
-            // 变更: 添加 OCP ORV3 和 ORV2
+            // 变更: 添加 OCP Solutions, 移除 ocp_orv3 和 ocp_orv2
             const productData = {
-                // --- 新增 OCP ORV3 ---
-                'ocp_orv3': {
-                    title: 'OCP ORV3 核心产品 (AI机柜)',
-                    description: '区别于传统19英寸机柜，ORV3采用21英寸导轨结构，符合OCP标准。核心特性包括48V后置直流母线供电系统，取代传统PDU，专为AI、高密度计算和超大规模数据中心设计。',
-                    image: 'https://placehold.co/600x400/1E40AF/FFFFFF?text=OCP+ORV3+Rack',
+                // --- 新增 OCP 核心解决方案 ---
+                'ocp_solutions': {
+                    title: 'OCP 核心解决方案 (ORV3 / ORV2)',
+                    description: '我们提供全系列符合OCP (Open Compute Project) 标准的核心组件，包括21英寸机架、48V层压母线、电源/BBU外壳及过渡配件，支持AI数据中心的高功率48V直流供电和传统12V架构。',
+                    image: 'https://placehold.co/600x400/1E40AF/FFFFFF?text=OCP+Solutions',
                     sub_products: [
                         {
-                            model: 'AxiomRack ORV3 (48V)',
-                            description: 'OCP V3 21英寸标准机柜，适用于高密度AI服务器。',
+                            model: '48V 层压母线 (Laminated Busbar)',
+                            description: '适用于AI数据中心高功率48V直流供电。低电感、低损耗设计，层压结构（扩散焊 + 绝缘层技术），微米级精度。',
                             specs: [
-                                { name: '标准', value: 'Open Compute Project (OCP) V3' },
-                                { name: '结构', value: '21英寸导轨 (Open Rack)' },
-                                { name: '供电', value: '48V 后置直流母线 (Busbar)' },
-                                { name: '散热', value: '支持整机柜液冷冷板集成' },
-                                { name: '电源', value: '模块化电源系统' },
-                                { name: '承重', value: '最高可达 1400kg' },
-                                { name: '优势', value: '更高机柜内部空间利用率' }
+                                { name: '适用', value: 'AI数据中心 (48V直流)' },
+                                { name: '电流', value: '≥ 300A' },
+                                { name: '技术', value: '层压结构 (扩散焊)' },
+                                { name: '配套', value: '含连接器、夹具、电缆组件' }
                             ],
                             drawing_url: '#' 
-                        }
-                    ]
-                },
-                // --- 新增 OCP ORV2 ---
-                'ocp_orv2': {
-                    title: 'OCP ORV2 核心产品 (标准机柜)',
-                    description: '采用21英寸导轨结构，符合OCP V2标准。具备12V双区后置直流母线供电系统，提供模块化电源、高承重及高空间利用率，是超大规模数据中心的理想选择。',
-                    image: 'https://placehold.co/600x400/1D4ED8/FFFFFF?text=OCP+ORV2+Rack',
-                    sub_products: [
+                        },
                         {
-                            model: 'AxiomRack ORV2 (12V)',
-                            description: 'OCP V2 21英寸标准机柜，成熟可靠。',
+                            model: 'OCP ORV3 21" 开放机架框架',
+                            description: '21英寸（OpenU制式）标准化OCP机架。支持48V供电架构及液冷安装预留。',
                             specs: [
-                                { name: '标准', value: 'Open Compute Project (OCP) V2' },
-                                { name: '结构', value: '21英寸导轨 (Open Rack)' },
-                                { name: '供电', value: '12V 双区后置直流母线 (Busbar)' },
-                                { name: '电源', value: '模块化电源系统' },
-                                { name: '承重', value: '高承重 ( > 1200kg)' },
-                                { name: '优势', value: '高空间利用率，取代传统AC PDU' }
+                                { name: '标准', value: 'OCP ORV3' },
+                                { name: '尺寸', value: '21英寸 (OpenU)' },
+                                { name: '供电', value: '48V 架构' },
+                                { name: '散热', value: '液冷安装预留' },
+                                { name: '承重', value: '≥ 1400kg' }
+                            ],
+                            drawing_url: '#' 
+                        },
+                        {
+                            model: 'Power Shelf / BBU Shelf 金属外壳',
+                            description: '（不含电源或电池，仅结构件）完全符合OCP标准尺寸与安装接口。支持高散热气流或液冷设计。',
+                            specs: [
+                                { name: '类型', value: '结构件 (金属外壳)' },
+                                { name: '标准', value: 'OCP V2 / V3 尺寸' },
+                                { name: '散热', value: '支持高气流或液冷' },
+                                { name: '工艺', value: '高速精密冲压' }
+                            ],
+                            drawing_url: '#' 
+                        },
+                        {
+                            model: '19" ↔ 21" 过渡配件套件',
+                            description: '兼容传统19英寸设备与21英寸OCP机架混合部署。含适配导轨、托盘、桥接框架等。',
+                            specs: [
+                                { name: '功能', value: '19" 设备安装于 21" 机架' },
+                                { name: '组件', value: '适配导轨, 托盘, 桥接框架' },
+                                { name: '目的', value: '降低升级障碍, 加速迁移' }
+                            ],
+                            drawing_url: '#' 
+                        },
+                        {
+                            model: 'OCP ORV2 (12V DC) 产品线',
+                            description: '（可选）覆盖旧版12V OCP数据中心存量市场。用于维护/替换升级，而非主要增长方向。',
+                            specs: [
+                                { name: '标准', value: 'OCP ORV2' },
+                                { name: '供电', value: '12V 直流' },
+                                { name: '市场', value: '存量市场维护/替换' },
+                                { name: '方向', value: '可选 (非主要增长)' }
                             ],
                             drawing_url: '#' 
                         }
@@ -724,7 +733,6 @@
                                 <!-- 占位符 1 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
                                     <span class="text-sm text-gray-500">[案例图片 1]</span>
-                                D.
                                 </div>
                                 <!-- 占位符 2 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
