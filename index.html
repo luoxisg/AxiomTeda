@@ -110,7 +110,27 @@
                 <!-- 变更 (Request 1): 调整了卡片顺序, 并修改了 "常规物理基础设施" 的标题和描述 (Request 3) -->
                 <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mt-24 md:max-w-5xl md:grid-cols-2">
                     
-                    <!-- 卡片 1 (原卡片4): 通用物理基础链路及配件 -->
+                    <!-- 新增卡片 1: OCP ORV3 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">OCP ORV3 核心产品</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 48V直流 · AI液冷集成</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            采用OCP 21英寸标准，配备48V后置直流母线供电，专为整机柜液冷集成和高密度AI计算设计。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_orv3">了解更多 &rarr;</button>
+                    </div>
+
+                    <!-- 新增卡片 2: OCP ORV2 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">OCP ORV2 核心产品</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 12V双区 · OCP标准</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            符合OCP 21英寸导轨，具备12V双区直流母线，支持模块化电源与高空间利用率，适用于超大规模数据中心。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_orv2">了解更多 &rarr;</button>
+                    </div>
+
+                    <!-- 卡片 3 (原卡片1): 通用物理基础链路及配件 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">通用物理基础链路及配件</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
@@ -120,7 +140,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
                     </div>
 
-                    <!-- 卡片 2 (原卡片1): 风冷 -->
+                    <!-- 卡片 4 (原卡片2): 风冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">风冷式微模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">经典可靠 · 成本优化</p>
@@ -130,7 +150,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 3 (原卡片2): 液冷 -->
+                    <!-- 卡片 5 (原卡片3): 液冷 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">液冷式模块数据中心</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">极致密度 · 高效散热</p>
@@ -140,7 +160,7 @@
                         <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled">了解更多 &rarr;</button>
                     </div>
                     
-                    <!-- 卡片 4 (原卡片3): AIOS -->
+                    <!-- 卡片 6 (原卡片4): AIOS -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
                         <h3 class="text-xl font-semibold text-gray-900">AIOS (动环监控平台)</h3>
                         <p class="mt-1 text-sm font-semibold text-indigo-600">智能监控 · 数字孪生</p>
@@ -307,8 +327,10 @@
                 <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
                     <div>
                         <h3 class="text-sm font-semibold leading-6 text-white">产品中心</h3>
-                        <!-- 变更 (Request 1): 调整页脚链接顺序以匹配产品部分 -->
+                        <!-- 变更: 添加 OCP 链接 -->
                         <ul role="list" class="mt-6 space-y-4">
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_orv3">OCP ORV3</a></li>
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_orv2">OCP ORV2</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">通用基础链路</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="air_cooled">风冷式微模块</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="liquid_cooled">液冷式微模块</a></li>
@@ -392,10 +414,53 @@
             const specView = document.getElementById('spec-view-container');
             const directSpecLinks = document.querySelectorAll('.spec-direct-link');
 
-            // --- ProductData (v13 最终版) ---
-            // 变更 (Request 2c & 3): 调整 'liquid_cooled' 的 sub_products 顺序,
-            // 并更新 'infrastructure' 的 title 和 description
+            // --- ProductData ---
+            // 变更: 添加 OCP ORV3 和 ORV2
             const productData = {
+                // --- 新增 OCP ORV3 ---
+                'ocp_orv3': {
+                    title: 'OCP ORV3 核心产品 (AI机柜)',
+                    description: '区别于传统19英寸机柜，ORV3采用21英寸导轨结构，符合OCP标准。核心特性包括48V后置直流母线供电系统，取代传统PDU，专为AI、高密度计算和超大规模数据中心设计。',
+                    image: 'https://placehold.co/600x400/1E40AF/FFFFFF?text=OCP+ORV3+Rack',
+                    sub_products: [
+                        {
+                            model: 'AxiomRack ORV3 (48V)',
+                            description: 'OCP V3 21英寸标准机柜，适用于高密度AI服务器。',
+                            specs: [
+                                { name: '标准', value: 'Open Compute Project (OCP) V3' },
+                                { name: '结构', value: '21英寸导轨 (Open Rack)' },
+                                { name: '供电', value: '48V 后置直流母线 (Busbar)' },
+                                { name: '散热', value: '支持整机柜液冷冷板集成' },
+                                { name: '电源', value: '模块化电源系统' },
+                                { name: '承重', value: '最高可达 1400kg' },
+                                { name: '优势', value: '更高机柜内部空间利用率' }
+                            ],
+                            drawing_url: '#' 
+                        }
+                    ]
+                },
+                // --- 新增 OCP ORV2 ---
+                'ocp_orv2': {
+                    title: 'OCP ORV2 核心产品 (标准机柜)',
+                    description: '采用21英寸导轨结构，符合OCP V2标准。具备12V双区后置直流母线供电系统，提供模块化电源、高承重及高空间利用率，是超大规模数据中心的理想选择。',
+                    image: 'https://placehold.co/600x400/1D4ED8/FFFFFF?text=OCP+ORV2+Rack',
+                    sub_products: [
+                        {
+                            model: 'AxiomRack ORV2 (12V)',
+                            description: 'OCP V2 21英寸标准机柜，成熟可靠。',
+                            specs: [
+                                { name: '标准', value: 'Open Compute Project (OCP) V2' },
+                                { name: '结构', value: '21英寸导轨 (Open Rack)' },
+                                { name: '供电', value: '12V 双区后置直流母线 (Busbar)' },
+                                { name: '电源', value: '模块化电源系统' },
+                                { name: '承重', value: '高承重 ( > 1200kg)' },
+                                { name: '优势', value: '高空间利用率，取代传统AC PDU' }
+                            ],
+                            drawing_url: '#' 
+                        }
+                    ]
+                },
+                // --- 现有数据 ---
                 'air_cooled': {
                     title: '风冷式微模块数据中心',
                     description: '经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。',
@@ -427,7 +492,6 @@
                     title: '液冷式模块数据中心',
                     description: '专为高密度计算设计。我们的解决方案涵盖先进的冷板式、背门热交换以及高效的单相浸没式冷却方案。',
                     image: 'https://placehold.co/600x400/334155/FFFFFF?text=Liquid+Cooled',
-                    // 变更 (Request 2): 恢复 'liquid_cooled' 的 sub_products, 移除错误的条目，恢复原始条目
                     sub_products: [
                         {
                             model: 'HD-LC1000 (冷板式)',
@@ -462,7 +526,6 @@
                         }
                     ]
                 },
-                // 变更 (Request 1): 恢复 'infrastructure' 对象, 并添加原始及新的 sub_products
                 'infrastructure': {
                     title: '通用物理基础链路及配件',
                     description: '提供数据中心所需的高质量机柜、配电、空调、UPS及常用配件，为您的算力设施打造坚实可靠的物理基础。',
@@ -605,6 +668,8 @@
                         heading = 'DCIM 软件套件';
                     } else if (productId === 'infrastructure') {
                         heading = '基础配件系列';
+                    } else if (productId.startsWith('ocp')) {
+                        heading = '核心规格';
                     }
                     specsHeading.textContent = heading;
                     
@@ -659,6 +724,7 @@
                                 <!-- 占位符 1 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
                                     <span class="text-sm text-gray-500">[案例图片 1]</span>
+                                D.
                                 </div>
                                 <!-- 占位符 2 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
@@ -666,7 +732,10 @@
                                 </div>
                             </div>
                         `;
-                        card.insertAdjacentHTML('beforeend', caseStudyHtml);
+                        // 仅为 OCP 产品添加案例介绍
+                        if (!productId.startsWith('ocp')) {
+                            card.insertAdjacentHTML('beforeend', caseStudyHtml);
+                        }
                         // --- 结束注入 ---
 
 
@@ -675,10 +744,14 @@
                         downloadLink.href = sub.drawing_url;
                         // 变更: 为案例介绍的占位符增加上边距
                         downloadLink.className = 'mt-8 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
-                        const buttonText = (productId === 'aios') ? '了解更多' : '图纸下载 (.pdf)';
-                        const buttonIcon = (productId === 'aios') ? 
-                            `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L8.818 3.682a.75.75 0 011.06-1.06l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>` : 
-                            `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l4.5 4.5a.75.75 0 001.06 0l4.5-4.5a.75.75 0 00-1.06-1.06L11.5 12.114V3.5A.75.75 0 0010 2.75zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" /></svg>`;
+                        
+                        let buttonText = '图纸下载 (.pdf)';
+                        let buttonIcon = `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l4.5 4.5a.75.75 0 001.06 0l4.5-4.5a.75.75 0 00-1.06-1.06L11.5 12.114V3.5A.75.75 0 0010 2.75zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" /></svg>`;
+
+                        if (productId === 'aios' || productId.startsWith('ocp')) {
+                            buttonText = '了解更多';
+                            buttonIcon = `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L8.818 3.682a.75.75 0 011.06-1.06l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>`;
+                        }
                         
                         downloadLink.innerHTML = buttonIcon + " " + buttonText;
                         
