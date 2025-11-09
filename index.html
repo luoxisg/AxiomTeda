@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AxiomDeta - 领先的AI算力解决方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* .bg-hds-blue { background-color: #0A2540; } */
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header (HDS 风格) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">AxiomDeta</span>
+                    <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta 公司Logo">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="open-menu">
+                    <span class="sr-only">打开主菜单</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <!-- 导航栏 (v9 样式) -->
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="#hero" class="text-sm font-semibold leading-6 text-gray-900">首页</a>
+                <a href="#products" class="text-sm font-semibold leading-6 text-gray-900">产品中心</a>
+                <a href="#digital-showroom" class="text-sm font-semibold leading-6 text-gray-900">数字展厅</a>
+                <a href="#partners" class="text-sm font-semibold leading-6 text-gray-900">合作伙伴</a>
+                <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900">联系我们</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">登录 <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <!-- Mobile menu (v9 样式) -->
+        <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">AxiomDeta</span>
+                        <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta 公司Logo">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
+                        <span class="sr-only">关闭菜单</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#hero" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">首页</a>
+                            <a href="#products" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">产品中心</a>
+                            <a href="#digital-showroom" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">数字展厅</a>
+                            <a href="#partners" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">合作伙伴</a>
+                            <a href="#contact" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">联系我们</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative isolate bg-slate-900 py-24 sm:py-32">
+        <!-- ... 装饰性渐变 ... -->
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+        
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <!-- 变更: h2 标题更新 -->
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">AxiomDeta: 驱动未来AI</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-300">
+                    我们提供端到端的AI算力解决方案，从高性能硬件到智能操作系统，助您在人工智能时代保持领先。
+                </p>
+                <div class="mt-10 flex items-center gap-x-6">
+                    <a href="#products" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">浏览产品</a>
+                    <a href="#contact" class="text-sm font-semibold leading-6 text-white">联系我们 <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="bg-white">
+
+        <!-- Product Center Section (v13 样式) -->
+        <section id="products" class="py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base font-semibold leading-7 text-indigo-600">产品中心</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">算力基础设施</p>
+                </div>
+                
+                <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mt-24 md:max-w-5xl md:grid-cols-2">
+                    
+                    <!-- 卡片 1: 风冷 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">风冷式微模块数据中心</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">经典可靠 · 成本优化</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled">了解更多 &rarr;</button>
+                    </div>
+                    
+                    <!-- 卡片 2: 液冷 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">液冷式模块数据中心</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">极致密度 · 高效散热</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            涵盖冷板式、背门热交换及浸没式冷却方案，实现行业领先的PUE。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled">了解更多 &rarr;</button>
+                    </div>
+                    
+                    <!-- 卡片 3: AIOS -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">AIOS (DCIM 平台)</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">智能监控 · 数字孪生</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            先进的 DCIM 与数字孪生平台，实现风冷与液冷的综合监控。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="aios">了解更多 &rarr;</button>
+                    </div>
+
+                    <!-- 卡片 4: 常规基建 -->
+                    <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900">常规物理基础设施</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            提供数据中心所需的高质量机柜、配线架、布线等基础组件。
+                        </p>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 数字展厅 Section -->
+        <section id="digital-showroom" class="py-24 sm:py-32 bg-gray-50">
+            <!-- ... 内容无变化 ... -->
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base font-semibold leading-7 text-indigo-600">探索未来</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        产品数字展厅
+                    </p>
+                </div>
+                <div class="mt-16 max-w-3xl mx-auto">
+                    <div class="rounded-lg border border-gray-200 bg-white p-8 shadow-sm text-center">
+                        <h3 class="text-xl font-semibold text-gray-900">沉浸式 3D 体验</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600">360度 · 交互式 · 全景漫游</p>
+                        <p class="mt-3 text-base text-gray-600">
+                            通过我们的沉浸式数字展厅，深入了解HCGD系列产品的创新设计与卓越性能。
+                        </p>
+                        <a href="https://www.720yun.com/t/0evkswmrrn2?scene_id=101833075" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            进入数字展厅
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 合作伙伴 Section (v10 样式) -->
+        <section id="partners" class="py-24 sm:py-32 bg-gray-50">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base font-semibold leading-7 text-indigo-600">生态共建</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">我们的合作伙伴</p>
+                </div>
+                <div class="mx-auto mt-16 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-7">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=HDCG" alt="HDCG Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=Xfusion" alt="Xfusion Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=Envicool" alt="Envicool Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=KEDA" alt="KEDA Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=NES" alt="NES Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=FOCUS" alt="FOCUS Logo">
+                    <img class="col-span-1 max-h-12 w-full object-contain grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition" src="https://placehold.co/200x80/CCCCCC/888888?text=OCP" alt="OCP Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-slate-900 py-24 sm:py-32">
+            <!-- ... 内容无变化 ... -->
+             <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h2 class="text-3xl font-bold tracking-tight text-white">联系我们</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">我们期待与您合作，共同探索AI的无限可能。请留下您的信息，我们的专家团队将尽快与您联系。</p>
+                </div>
+                <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+                    <!-- ... 表单内容 ... -->
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                        <div>
+                            <label for="first-name" class="block text-sm font-semibold leading-6 text-white">姓氏</label>
+                            <div class="mt-2.5">
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-semibold leading-6 text-white">名字</label>
+                            <div class="mt-2.5">
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="company" class="block text-sm font-semibold leading-6 text-white">公司</label>
+                            <div class="mt-2.5">
+                                <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="email" class="block text-sm font-semibold leading-6 text-white">邮箱</label>
+                            <div class="mt-2.5">
+                                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block text-sm font-semibold leading-6 text-white">您的需求</label>
+                            <div class="mt-2.5">
+                                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <button type="submit" class="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">提交</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal (v11 样式) -->
+    <section id="product-modal" class="hidden fixed inset-0 z-[100] bg-gray-50 overflow-y-auto">
+        <div class="container mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+            
+            <button id="back-to-main" class="mb-8 inline-flex items-center gap-x-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd" />
+                </svg>
+                返回主页
+            </button>
+
+            <!-- 规格容器 -->
+            <div id="spec-view-container">
+                <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+                    <!-- 类别图片 -->
+                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 shadow-lg">
+                        <img src="" id="detail-image" alt="Product image" class="h-full w-full object-cover object-center">
+                    </div>
+                    <!-- 类别信息 -->
+                    <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+                        <h1 id="detail-title" class="text-3xl font-bold tracking-tight text-gray-900"></h1>
+                        <p id="detail-description" class="mt-6 text-lg text-gray-700"></p>
+                    </div>
+                </div>
+                
+                <!-- 子系列/特性 容器 -->
+                <div class="mt-16">
+                    <h3 id="specs-heading" class="text-2xl font-medium text-gray-900"></h3>
+                    <div id="detail-specs-container" class="mt-6">
+                        <!-- JS 将在此处填充内容 -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (v10 样式) -->
+    <footer class="bg-slate-900" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">页脚</h2>
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <!-- 
+                  变更: Logo 和地址 (v14)
+                -->
+                <div class="space-y-8">
+                    <img class="h-8" src="https://placehold.co/150x40/FFFFFF/000000?text=AxiomDeta" alt="AxiomDeta 公司Logo">
+                    <p class="text-sm leading-6 text-gray-300">
+                        我们致力于将全球领先的数据中心技术带入欧洲和亚洲市场。
+                    </p>
+                    <p class="text-sm leading-6 text-gray-300">
+                        AxiomDeta (Singapore) Pte. Ltd. <br>
+                        123 Marina Bay Sands, Singapore 018956
+                    </p>
+                </div>
+                <!-- 链接网格 (v10 样式) -->
+                <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white">产品中心</h3>
+                        <ul role="list" class="mt-6 space-y-4">
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="air_cooled">风冷式微模块</a></li>
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="liquid_cooled">液冷式微模块</a></li>
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="aios">AIOS (DCIM)</a></li>
+                            <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">常规基础设施</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white">合作伙伴</h3>
+                        <ul role="list" class="mt-6 space-y-4">
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">HDCG</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">Xfusion</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">Envicool</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">KEDA</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">NES</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">FOCUS</a></li>
+                            <li><a href="#partners" class="text-sm leading-6 text-gray-300 hover:text-white">OCP</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white">公司</h3>
+                        <ul role="list" class="mt-6 space-y-4">
+                            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">关于我们</a></li>
+                            <li><a href="#contact" class="text-sm leading-6 text-gray-300 hover:text-white">联系我们</a></li>
+                            <li><a href="#digital-showroom" class="text-sm leading-6 text-gray-300 hover:text-white">数字展厅</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 
+              变更: 版权 (v14)
+            -->
+            <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+                <!-- ... 社交图标 ... -->
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                </div>
+                <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+                    &copy; 2024 AxiomDeta (Singapore) Pte. Ltd. 保留所有权利。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+      变更: JavaScript (v14)
+      - 简化了 productData (v13 已正确)
+      - 简化了 showSpecView 函数，移除了已废弃的 if (data.specs) 逻辑
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- 基础元素 ---
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            // --- 移动菜单逻辑 ---
+            const openMenuBtn = document.getElementById('open-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            if (openMenuBtn && mobileMenu) {
+                openMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+            }
+            if (closeMenuBtn && mobileMenu) {
+                closeMenuBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            }
+            
+            // --- 弹窗 Modal 逻辑 ---
+            const productModal = document.getElementById('product-modal');
+            const backToMainBtn = document.getElementById('back-to-main');
+            const specView = document.getElementById('spec-view-container');
+            const directSpecLinks = document.querySelectorAll('.spec-direct-link');
+
+            // --- ProductData (v13 最终版) ---
+            const productData = {
+                'air_cooled': {
+                    title: '风冷式微模块数据中心',
+                    description: '经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。',
+                    image: 'https://placehold.co/600x400/4B5563/FFFFFF?text=Air+Cooled',
+                    sub_products: [
+                        {
+                            model: 'HA-2000 (标准型)',
+                            description: '标准风冷微模块，适用于中小型部署。',
+                            specs: [
+                                { name: '机柜数', value: '2-10' },
+                                { name: '单柜功率', value: '5-10kW' },
+                                { name: 'PUE', value: '< 1.4' }
+                            ],
+                            drawing_url: '#' 
+                        },
+                        {
+                            model: 'HA-2100 (增强型)',
+                            description: '增强型风冷设计，支持更高功率密度。',
+                            specs: [
+                                { name: '机柜数', value: '4-12' },
+                                { name: '单柜功率', value: '10-15kW' },
+                                { name: 'PUE', value: '< 1.35' }
+                            ],
+                            drawing_url: '#'
+                        }
+                    ]
+                },
+                'liquid_cooled': {
+                    title: '液冷式模块数据中心',
+                    description: '专为高密度计算设计。我们的解决方案涵盖先进的冷板式、背门热交换以及高效的单相浸没式冷却方案。',
+                    image: 'https://placehold.co/600x400/334155/FFFFFF?text=Liquid+Cooled',
+                    sub_products: [
+                        {
+                            model: 'HD-LC1000 (冷板式)',
+                            description: '高效冷板式液冷，直达芯片散热。',
+                            specs: [
+                                { name: '散热方式', value: '冷板式 (Direct-to-Chip)' },
+                                { name: '单柜功率', value: '30-60kW' },
+                                { name: 'PUE', value: '< 1.1' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'HD-IM500 (浸没式)',
+                            description: '单相浸没式冷却，适用于超高热密度。',
+                            specs: [
+                                { name: '散热方式', value: '单相浸没式' },
+                                { name: '单柜功率', value: '> 100kW' },
+                                { name: 'PUE', value: '< 1.05' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'HD-RDHx (背门热交换)',
+                            description: '与英维克(Envicool)合作，提供高效的背门热交换方案，适用于现有风冷机房的液冷升级。',
+                            specs: [
+                                { name: '合作产品', value: 'Envicool (英维克)' },
+                                { name: '散热方式', value: '液-风 热交换 (背门)' },
+                                { name: '单柜功率', value: '最高 40kW' },
+                                { name: 'PUE', value: '< 1.25' }
+                            ],
+                            drawing_url: '#'
+                        }
+                    ]
+                },
+                'infrastructure': {
+                    title: '常规物理基础设施',
+                    description: '提供数据中心所需的高质量机柜、配线架、布线等基础组件，为您的算力设施打造坚实可靠的物理基础。',
+                    image: 'https://placehold.co/600x800/64748B/FFFFFF?text=Infrastructure',
+                    sub_products: [
+                        {
+                            model: 'AxiomRack (机柜系列)',
+                            description: '42U/48U/52U 标准/定制机柜。',
+                            specs: [
+                                { name: '类型', value: '服务器机柜, 网络机柜' },
+                                { name: '承重', value: '静态 2000kg' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomPDU (智能PDU)',
+                            description: '智能 PDU, rPDU, 提供远程监控。',
+                            specs: [
+                                { name: '类型', value: 'rPDU, 智能 PDU' },
+                                { name: '插座', value: 'C13, C19' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomCable (布线系统)',
+                            description: '高密度光纤配线架及线缆。',
+                            specs: [
+                                { name: '类型', value: 'MPO/LC, AOC/DAC' },
+                                { name: '密度', value: '高密度配线架' }
+                            ],
+                            drawing_url: '#'
+                        }
+                    ]
+                },
+                'aios': {
+                    title: 'AIOS (DCIM 软件平台)',
+                    description: '提供先进的 DCIM 和数字孪生软件，专注于机房风冷、液冷系统的综合监测与智能管理。',
+                    image: 'https://placehold.co/600x400/4f46e5/FFFFFF?text=AIOS+DCIM',
+                    sub_products: [
+                        {
+                            model: 'AxiomCool (风冷监测)',
+                            description: '对机房风冷系统（如精密空调）进行智能化监控与调优。',
+                            specs: [
+                                { name: '监控对象', value: '精密空调, CRAC, CRAH' },
+                                { name: '核心功能', value: '能效PUE分析, 告警管理' }
+                            ],
+                            drawing_url: '#' 
+                        },
+                        {
+                            model: 'AxiomHybrid (混合散热监测)',
+                            description: '统一平台综合监测风冷与液冷（CDU, 背门）系统，实现全局热管理。',
+                            specs: [
+                                { name: '监控对象', value: 'CDU, RDHx, 精密空调, 漏液检测' },
+                                { name: '核心功能', value: '混合散热策略, 联动告警' }
+                            ],
+                            drawing_url: '#'
+                        },
+                        {
+                            model: 'AxiomTwin (数字孪生)',
+                            description: '构建数据中心 3D 可视化数字孪生模型，实时仿真气流与热量分布。',
+                            specs: [
+                                { name: '可视化', value: '3D 资产管理, 容量仿真' },
+                                { name: '核心功能', value: 'CFD 气流模拟, 热点分析' }
+                            ],
+                            drawing_url: '#'
+                        }
+                    ]
+                }
+            };
+
+            // --- 核心功能函数 ---
+
+            // 关闭 Modal
+            function hideProductModal() {
+                mainContent.classList.remove('hidden');
+                header.classList.remove('hidden');
+                footer.classList.remove('hidden');
+                productModal.classList.add('hidden');
+            }
+
+            // 
+            // 变更：showSpecView (v14)
+            // - 移除了已废弃的 if (data.specs) 逻辑
+            //
+            function showSpecView(productId) {
+                const data = productData[productId];
+                if (!data) return;
+
+                // 1. 填充类别信息 (顶部)
+                document.getElementById('detail-image').src = data.image;
+                document.getElementById('detail-image').alt = data.title;
+                document.getElementById('detail-title').textContent = data.title;
+                document.getElementById('detail-description').textContent = data.description;
+                
+                const specsContainer = document.getElementById('detail-specs-container');
+                const specsHeading = document.getElementById('specs-heading');
+                specsContainer.innerHTML = ''; // 清空
+
+                // 2. 填充规格 (统一使用 'sub_products')
+                if (data.sub_products) {
+                    let heading = '子系列产品型号';
+                    if (productId === 'aios') {
+                        heading = 'DCIM 软件套件';
+                    }
+                    specsHeading.textContent = heading;
+                    
+                    const listContainer = document.createElement('div');
+                    listContainer.className = 'space-y-10'; // 卡片间距
+
+                    data.sub_products.forEach(sub => {
+                        // 创建子产品卡片
+                        const card = document.createElement('div');
+                        card.className = 'p-6 bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden';
+                        
+                        // 1. 型号
+                        const modelTitle = document.createElement('h4');
+                        modelTitle.className = 'text-xl font-semibold text-indigo-700';
+                        modelTitle.textContent = sub.model;
+                        card.appendChild(modelTitle);
+                        
+                        // 2. 描述
+                        const modelDesc = document.createElement('p');
+                        modelDesc.className = 'mt-2 text-base text-gray-600';
+                        modelDesc.textContent = sub.description;
+                        card.appendChild(modelDesc);
+                        
+                        // 3. 规格列表
+                        const modelSpecsDl = document.createElement('dl');
+                        modelSpecsDl.className = 'mt-6 divide-y divide-gray-100';
+                        
+                        sub.specs.forEach(spec => {
+                            const specDiv = document.createElement('div');
+                            specDiv.className = 'py-3 grid grid-cols-3 gap-4';
+                            const dt = document.createElement('dt');
+                            dt.className = 'text-sm font-medium text-gray-500';
+                            dt.textContent = spec.name;
+                            const dd = document.createElement('dd');
+                            if (spec.name === '合作产品') {
+                                dd.className = 'text-sm text-gray-900 col-span-2 font-semibold';
+                            } else {
+                                dd.className = 'text-sm text-gray-900 col-span-2';
+                            }
+                            dd.textContent = spec.value;
+                            specDiv.appendChild(dt);
+                            specDiv.appendChild(dd);
+                            modelSpecsDl.appendChild(specDiv);
+                        });
+                        card.appendChild(modelSpecsDl);
+
+                        // 4. 下载按钮 (或 "了解更多" 链接)
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = sub.drawing_url;
+                        downloadLink.className = 'mt-6 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
+                        const buttonText = (productId === 'aios') ? '了解更多' : '图纸下载 (.pdf)';
+                        const buttonIcon = (productId === 'aios') ? 
+                            `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L8.818 3.682a.75.75 0 011.06-1.06l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>` : 
+                            `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l4.5 4.5a.75.75 0 001.06 0l4.5-4.5a.75.75 0 00-1.06-1.06L11.5 12.114V3.5A.75.75 0 0010 2.75zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" /></svg>`;
+                        
+                        downloadLink.innerHTML = buttonIcon + " " + buttonText;
+                        
+                        card.appendChild(downloadLink);
+
+                        listContainer.appendChild(card);
+                    });
+                    
+                    specsContainer.appendChild(listContainer);
+                } else {
+                    // 备用：如果 (data.sub_products) 也不存在
+                    specsHeading.textContent = '规格';
+                    specsContainer.innerHTML = '<p class="text-gray-500">暂无更多详细信息。</p>';
+                }
+
+                // 3. 打开 Modal
+                mainContent.classList.add('hidden');
+                header.classList.add('hidden');
+                footer.classList.add('hidden');
+                productModal.classList.remove('hidden');
+                window.scrollTo(0, 0); 
+                productModal.scrollTo(0, 0); 
+            }
+            
+            // --- 事件监听器 ---
+
+            // 1. 点击产品卡片 或 页脚链接 -> 直接打开规格页
+            directSpecLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    const productId = e.currentTarget.dataset.product;
+                    showSpecView(productId);
+                });
+            });
+
+            // 2. 在 Modal 中: 点击 "返回主页"
+            if (backToMainBtn) {
+                backToMainBtn.addEventListener('click', hideProductModal);
+            }
+            
+            // 3. 移动菜单锚点链接 (确保滚动正确)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault(); 
+                        if (!productModal.classList.contains('hidden')) {
+                             hideProductModal();
+                        }
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            setTimeout(() => {
+                                const headerHeight = document.querySelector('header').offsetHeight;
+                                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                                window.scrollTo({
+                                    top: targetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }, 100); 
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
+
+
+
