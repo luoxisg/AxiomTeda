@@ -1,9 +1,9 @@
  <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AxiomDeta - 领先的AI算力解决方案</title>
+    <title>AxiomDeta - Leading AI Infrastructure Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* .bg-hds-blue { background-color: #0A2540; } */
@@ -11,46 +11,61 @@
 </head>
 <body class="bg-white">
 
-    <!-- Header (HDS 风格) -->
+    <!-- Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
+            <div class="flex items-center gap-2 lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">AxiomDeta</span>
-                    <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta 公司Logo">
+                    <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta Logo">
                 </a>
             </div>
+
+            <!-- Mobile menu button -->
             <div class="flex lg:hidden">
                 <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="open-menu">
-                    <span class="sr-only">打开主菜单</span>
+                    <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
             </div>
-            <!-- 导航栏 (v9 样式) -->
+
+            <!-- Desktop nav -->
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#hero" class="text-sm font-semibold leading-6 text-gray-900">首页</a>
-                <a href="#products" class="text-sm font-semibold leading-6 text-gray-900">产品中心</a>
-                <a href="#digital-showroom" class="text-sm font-semibold leading-6 text-gray-900">数字展厅</a>
-                <a href="#partners" class="text-sm font-semibold leading-6 text-gray-900">合作伙伴</a>
-                <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900">联系我们</a>
+                <a href="#hero" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.home">Home</a>
+                <a href="#products" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.products">Products</a>
+                <a href="#digital-showroom" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.showroom">Digital Showroom</a>
+                <a href="#partners" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.partners">Partners</a>
+                <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.contact">Contact</a>
             </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">登录 <span aria-hidden="true">&rarr;</span></a>
+
+            <!-- Right: language + login -->
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
+                <!-- Language switch (desktop) -->
+                <div class="flex items-center gap-1 text-xs font-semibold">
+                    <button class="lang-btn px-2 py-1 rounded border text-gray-900" data-lang="en">EN</button>
+                    <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="zh-CN">简体</button>
+                    <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="zh-TW">繁體</button>
+                    <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="ja">日本語</button>
+                    <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="ko">한국어</button>
+                    <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="es">ES</button>
+                </div>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900" data-i18n="nav.login">Login &rarr;</a>
             </div>
         </nav>
-        <!-- Mobile menu (v9 样式) -->
+
+        <!-- Mobile menu -->
         <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
             <div class="fixed inset-0 z-50"></div>
             <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">AxiomDeta</span>
-                        <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta 公司Logo">
+                        <img class="h-8 w-auto" src="https://placehold.co/150x40/000000/FFFFFF?text=AxiomDeta" alt="AxiomDeta Logo">
                     </a>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
-                        <span class="sr-only">关闭菜单</span>
+                        <span class="sr-only">Close menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -59,14 +74,25 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="#hero" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">首页</a>
-                            <a href="#products" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">产品中心</a>
-                            <a href="#digital-showroom" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">数字展厅</a>
-                            <a href="#partners" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">合作伙伴</a>
-                            <a href="#contact" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">联系我们</a>
+                            <a href="#hero" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.home">Home</a>
+                            <a href="#products" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.products">Products</a>
+                            <a href="#digital-showroom" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.showroom">Digital Showroom</a>
+                            <a href="#partners" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.partners">Partners</a>
+                            <a href="#contact" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.contact">Contact</a>
                         </div>
-                        <div class="py-6">
-                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">登录</a>
+                        <div class="py-4 border-t border-gray-200">
+                            <!-- Mobile language switch -->
+                            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                                <button class="lang-btn px-2 py-1 rounded border text-gray-900" data-lang="en">EN</button>
+                                <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="zh-CN">简体</button>
+                                <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="zh-TW">繁體</button>
+                                <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="ja">日本語</button>
+                                <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="ko">한국어</button>
+                                <button class="lang-btn px-2 py-1 rounded border border-transparent text-gray-500" data-lang="es">ES</button>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-i18n="nav.login">Login &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -76,88 +102,102 @@
 
     <!-- Hero Section -->
     <section id="hero" class="relative isolate bg-slate-900 py-24 sm:py-32">
-        <!-- ... 装饰性渐变 ... -->
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
         </div>
         
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <!-- 变更: h2 标题更新 -->
-                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">AxiomDeta: 驱动未来AI</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                    我们提供端到端的AI算力解决方案，从高性能硬件到智能操作系统，助您在人工智能时代保持领先。
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl" data-i18n="hero.title">
+                    AxiomDeta: Powering the Future of AI
+                </h2>
+                <p class="mt-6 text-lg leading-8 text-gray-300" data-i18n="hero.subtitle">
+                    We provide end-to-end AI infrastructure solutions, from high-performance racks and power to air-cooled and liquid-cooled micro-modules and intelligent operation platforms.
                 </p>
                 <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#products" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">浏览产品</a>
-                    <a href="#contact" class="text-sm font-semibold leading-6 text-white">联系我们 <span aria-hidden="true">→</span></a>
+                    <a href="#products" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" data-i18n="hero.ctaPrimary">
+                        View Products
+                    </a>
+                    <a href="#contact" class="text-sm font-semibold leading-6 text-white" data-i18n="hero.ctaSecondary">
+                        Contact Us <span aria-hidden="true">→</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main class="bg-white">
 
-        <!-- Product Center Section (v13 样式) -->
+        <!-- Product Center -->
         <section id="products" class="py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:text-center">
-                    <h2 class="text-base font-semibold leading-7 text-indigo-600">产品中心</h2>
-                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">AI算力基础设施</p>
+                    <h2 class="text-base font-semibold leading-7 text-indigo-600" data-i18n="products.label">Product Center</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-i18n="products.title">AI Infrastructure</p>
                 </div>
                 
-                <!-- 变更 (Request 1): 调整了卡片顺序, 并修改了 "常规物理基础设施" 的标题和描述 (Request 3) -->
+                <!-- 风冷 排在第一个，其它内容不变 -->
                 <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mt-24 md:max-w-5xl md:grid-cols-2">
-                    
-                    <!-- 新增卡片 1: OCP 核心解决方案 (取代 ORV2 和 ORV3) -->
+
+                    <!-- 1. 风冷式微模块数据中心 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">OCP 核心解决方案</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">21英寸 · 直流供电 · OCP标准</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            提供从机架、母线到电源壳体的OCP标准组件，支持ORV3 (48V)和ORV2 (12V)架构。
+                        <h3 class="text-xl font-semibold text-gray-900" data-i18n="products.air.title">Air-cooled Micro-module Data Center</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600" data-i18n="products.air.tag">Classic & reliable · Cost optimized</p>
+                        <p class="mt-3 text-base text-gray-600" data-i18n="products.air.desc">
+                            Classic air-cooled design that balances performance and cost, suitable for a wide range of standard rooms and brownfield sites.
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_solutions">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled" data-i18n="products.more">
+                            Learn more &rarr;
+                        </button>
                     </div>
 
-                    <!-- 卡片 2: 通用物理基础链路及配件 -->
+                    <!-- 2. OCP 核心解决方案 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">通用物理基础链路及配件</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">坚实基础 · 可靠支撑</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            提供数据中心所需的高质量机柜、配电、空调、UPS及常用配件。
+                        <h3 class="text-xl font-semibold text-gray-900" data-i18n="products.ocp.title">OCP Core Solutions</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600" data-i18n="products.ocp.tag">21" · DC Power · OCP Standard</p>
+                        <p class="mt-3 text-base text-gray-600" data-i18n="products.ocp.desc">
+                            Full range of OCP-compliant components from racks and laminated busbars to power/BBU shelves, supporting both ORV3 (48V) and ORV2 (12V) architectures.
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="ocp_solutions" data-i18n="products.more">
+                            Learn more &rarr;
+                        </button>
                     </div>
 
-                    <!-- 卡片 3: 风冷 -->
+                    <!-- 3. 通用物理基础链路及配件 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">风冷式微模块数据中心</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">经典可靠 · 成本优化</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。
+                        <h3 class="text-xl font-semibold text-gray-900" data-i18n="products.infra.title">General Physical Infrastructure & Accessories</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600" data-i18n="products.infra.tag">Solid foundation · Reliable support</p>
+                        <p class="mt-3 text-base text-gray-600" data-i18n="products.infra.desc">
+                            High-quality cabinets, power distribution, cooling, UPS and common accessories providing a robust physical foundation for your data center.
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="air_cooled">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="infrastructure" data-i18n="products.more">
+                            Learn more &rarr;
+                        </button>
                     </div>
-                    
-                    <!-- 卡片 4: 液冷 -->
+
+                    <!-- 4. 液冷式模块数据中心 -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">液冷式模块数据中心</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">极致密度 · 高效散热</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            涵盖冷板式、背门热交换及浸没式冷却方案，实现行业领先的PUE。
+                        <h3 class="text-xl font-semibold text-gray-900" data-i18n="products.liquid.title">Liquid-cooled Modular Data Center</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600" data-i18n="products.liquid.tag">Extreme density · High efficiency</p>
+                        <p class="mt-3 text-base text-gray-600" data-i18n="products.liquid.desc">
+                            Designed for high-density computing, covering cold-plate, rear-door heat exchanger and single-phase immersion solutions to achieve leading PUE.
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="liquid_cooled" data-i18n="products.more">
+                            Learn more &rarr;
+                        </button>
                     </div>
-                    
-                    <!-- 卡片 5: AIOS -->
+
+                    <!-- 5. AIOS (动环监控平台) -->
                     <div class="rounded-lg border border-gray-200 p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900">AIOS (动环监控平台)</h3>
-                        <p class="mt-1 text-sm font-semibold text-indigo-600">智能监控 · 数字孪生</p>
-                        <p class="mt-3 text-base text-gray-600">
-                            先进的 DCIM 与数字孪生平台，实现风冷与液冷的综合监控。
+                        <h3 class="text-xl font-semibold text-gray-900" data-i18n="products.aios.title">AIOS (DCIM Platform)</h3>
+                        <p class="mt-1 text-sm font-semibold text-indigo-600" data-i18n="products.aios.tag">Smart monitoring · Digital twin</p>
+                        <p class="mt-3 text-base text-gray-600" data-i18n="products.aios.desc">
+                            An advanced DCIM and digital-twin platform providing integrated monitoring and management of both air-cooled and liquid-cooled systems.
                         </p>
-                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="aios">了解更多 &rarr;</button>
+                        <button type="button" class="spec-direct-link mt-6 inline-block text-sm font-semibold leading-6 text-indigo-600" data-product="aios" data-i18n="products.more">
+                            Learn more &rarr;
+                        </button>
                     </div>
 
                 </div>
@@ -166,7 +206,6 @@
 
         <!-- 数字展厅 Section -->
         <section id="digital-showroom" class="py-24 sm:py-32 bg-gray-50">
-            <!-- ... 内容无变化 ... -->
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:text-center">
                     <h2 class="text-base font-semibold leading-7 text-indigo-600">探索未来</h2>
@@ -189,7 +228,7 @@
             </div>
         </section>
 
-        <!-- 合作伙伴 Section (v10 样式) -->
+        <!-- 合作伙伴 Section -->
         <section id="partners" class="py-24 sm:py-32 bg-gray-50">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:text-center">
@@ -210,14 +249,12 @@
 
         <!-- Contact Section -->
         <section id="contact" class="bg-slate-900 py-24 sm:py-32">
-            <!-- ... 内容无变化 ... -->
              <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:mx-0">
                     <h2 class="text-3xl font-bold tracking-tight text-white">联系我们</h2>
                     <p class="mt-6 text-lg leading-8 text-gray-300">我们期待与您合作，共同探索AI的无限可能。请留下您的信息，我们的专家团队将尽快与您联系。</p>
                 </div>
                 <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-                    <!-- ... 表单内容 ... -->
                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                             <label for="first-name" class="block text-sm font-semibold leading-6 text-white">姓氏</label>
@@ -258,7 +295,7 @@
         </section>
     </main>
 
-    <!-- Modal (v11 样式) -->
+    <!-- Product Modal -->
     <section id="product-modal" class="hidden fixed inset-0 z-[100] bg-gray-50 overflow-y-auto">
         <div class="container mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
             
@@ -269,25 +306,20 @@
                 返回主页
             </button>
 
-            <!-- 规格容器 -->
             <div id="spec-view-container">
                 <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
-                    <!-- 类别图片 -->
                     <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 shadow-lg">
                         <img src="" id="detail-image" alt="Product image" class="h-full w-full object-cover object-center">
                     </div>
-                    <!-- 类别信息 -->
                     <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
                         <h1 id="detail-title" class="text-3xl font-bold tracking-tight text-gray-900"></h1>
                         <p id="detail-description" class="mt-6 text-lg text-gray-700"></p>
                     </div>
                 </div>
                 
-                <!-- 子系列/特性 容器 -->
                 <div class="mt-16">
                     <h3 id="specs-heading" class="text-2xl font-medium text-gray-900"></h3>
                     <div id="detail-specs-container" class="mt-6">
-                        <!-- JS 将在此处填充内容 -->
                     </div>
                 </div>
             </div>
@@ -295,14 +327,11 @@
         </div>
     </section>
 
-    <!-- Footer (v10 样式) -->
+    <!-- Footer -->
     <footer class="bg-slate-900" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">页脚</h2>
         <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <!-- 
-                  变更: Logo 和地址 (v14)
-                -->
                 <div class="space-y-8">
                     <img class="h-8" src="https://placehold.co/150x40/FFFFFF/000000?text=AxiomDeta" alt="AxiomDeta 公司Logo">
                     <p class="text-sm leading-6 text-gray-300">
@@ -313,11 +342,9 @@
                         123 Marina Bay Sands, Singapore 018956
                     </p>
                 </div>
-                <!-- 链接网格 (v10 样式) -->
                 <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
                     <div>
                         <h3 class="text-sm font-semibold leading-6 text-white">产品中心</h3>
-                        <!-- 变更: 添加 OCP 链接, 移除旧链接 -->
                         <ul role="list" class="mt-6 space-y-4">
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="ocp_solutions">OCP 解决方案</a></li>
                             <li><a href="#" class="spec-direct-link text-sm leading-6 text-gray-300 hover:text-white" data-product="infrastructure">通用基础链路</a></li>
@@ -349,11 +376,7 @@
                 </div>
             </div>
             
-            <!-- 
-              变更: 版权 (v14)
-            -->
             <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-                <!-- ... 社交图标 ... -->
                 <div class="flex space-x-6 md:order-2">
                     <a href="#" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">LinkedIn</span>
@@ -371,20 +394,14 @@
         </div>
     </footer>
 
-    <!-- 
-      变更: JavaScript (v14)
-      - 简化了 productData (v13 已正确)
-      - 简化了 showSpecView 函数，移除了已废弃的 if (data.specs) 逻辑
-    -->
+    <!-- 原有 JS + 多语言逻辑 -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            
-            // --- 基础元素 ---
             const mainContent = document.querySelector('main');
             const header = document.querySelector('header');
             const footer = document.querySelector('footer');
 
-            // --- 移动菜单逻辑 ---
+            // Mobile menu
             const openMenuBtn = document.getElementById('open-menu');
             const closeMenuBtn = document.getElementById('close-menu');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -397,16 +414,12 @@
                 closeMenuBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
             }
             
-            // --- 弹窗 Modal 逻辑 ---
+            // Modal
             const productModal = document.getElementById('product-modal');
             const backToMainBtn = document.getElementById('back-to-main');
-            const specView = document.getElementById('spec-view-container');
             const directSpecLinks = document.querySelectorAll('.spec-direct-link');
 
-            // --- ProductData ---
-            // 变更: 添加 OCP Solutions, 移除 ocp_orv3 和 ocp_orv2
             const productData = {
-                // --- 新增 OCP 核心解决方案 ---
                 'ocp_solutions': {
                     title: 'OCP 核心解决方案 (ORV3 / ORV2)',
                     description: '我们提供全系列符合OCP (Open Compute Project) 标准的核心组件，包括21英寸机架、48V层压母线、电源/BBU外壳及过渡配件，支持AI数据中心的高功率48V直流供电和传统12V架构。',
@@ -421,7 +434,7 @@
                                 { name: '技术', value: '层压结构 (扩散焊)' },
                                 { name: '配套', value: '含连接器、夹具、电缆组件' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: 'OCP ORV3 21" 开放机架框架',
@@ -433,7 +446,7 @@
                                 { name: '散热', value: '液冷安装预留' },
                                 { name: '承重', value: '≥ 1400kg' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: 'Power Shelf / BBU Shelf 金属外壳',
@@ -444,7 +457,7 @@
                                 { name: '散热', value: '支持高气流或液冷' },
                                 { name: '工艺', value: '高速精密冲压' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: '19" ↔ 21" 过渡配件套件',
@@ -454,7 +467,7 @@
                                 { name: '组件', value: '适配导轨, 托盘, 桥接框架' },
                                 { name: '目的', value: '降低升级障碍, 加速迁移' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: 'OCP ORV2 (12V DC) 产品线',
@@ -465,11 +478,10 @@
                                 { name: '市场', value: '存量市场维护/替换' },
                                 { name: '方向', value: '可选 (非主要增长)' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         }
                     ]
                 },
-                // --- 现有数据 ---
                 'air_cooled': {
                     title: '风冷式微模块数据中心',
                     description: '经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。',
@@ -483,7 +495,7 @@
                                 { name: '单柜功率', value: '5-10kW' },
                                 { name: 'PUE', value: '< 1.4' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: 'HA-2100 (增强型)',
@@ -617,7 +629,7 @@
                                 { name: '监控对象', value: '动力系统 (UPS, 配电), 环境系统 (温湿度, 漏水), 安防 (门禁, 视频)' },
                                 { name: '核心功能', value: '实时监测, 智能告警, 能效PUE分析, 运维管理' }
                             ],
-                            drawing_url: '#' 
+                            drawing_url: '#'
                         },
                         {
                             model: 'AxiomHybrid (混合散热监测)',
@@ -641,9 +653,6 @@
                 }
             };
 
-            // --- 核心功能函数 ---
-
-            // 关闭 Modal
             function hideProductModal() {
                 mainContent.classList.remove('hidden');
                 header.classList.remove('hidden');
@@ -651,16 +660,10 @@
                 productModal.classList.add('hidden');
             }
 
-            // 
-            // 变更：showSpecView (v14)
-            // - 移除了已废弃的 if (data.specs) 逻辑
-            // 变更 (Request 2a, 2b): 注入案例介绍和图片占位符
-            //
             function showSpecView(productId) {
                 const data = productData[productId];
                 if (!data) return;
 
-                // 1. 填充类别信息 (顶部)
                 document.getElementById('detail-image').src = data.image;
                 document.getElementById('detail-image').alt = data.title;
                 document.getElementById('detail-title').textContent = data.title;
@@ -668,9 +671,8 @@
                 
                 const specsContainer = document.getElementById('detail-specs-container');
                 const specsHeading = document.getElementById('specs-heading');
-                specsContainer.innerHTML = ''; // 清空
+                specsContainer.innerHTML = '';
 
-                // 2. 填充规格 (统一使用 'sub_products')
                 if (data.sub_products) {
                     let heading = '子系列产品型号';
                     if (productId === 'aios') {
@@ -683,26 +685,22 @@
                     specsHeading.textContent = heading;
                     
                     const listContainer = document.createElement('div');
-                    listContainer.className = 'space-y-10'; // 卡片间距
+                    listContainer.className = 'space-y-10';
 
                     data.sub_products.forEach(sub => {
-                        // 创建子产品卡片
                         const card = document.createElement('div');
                         card.className = 'p-6 bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden';
                         
-                        // 1. 型号
                         const modelTitle = document.createElement('h4');
                         modelTitle.className = 'text-xl font-semibold text-indigo-700';
                         modelTitle.textContent = sub.model;
                         card.appendChild(modelTitle);
                         
-                        // 2. 描述
                         const modelDesc = document.createElement('p');
                         modelDesc.className = 'mt-2 text-base text-gray-600';
                         modelDesc.textContent = sub.description;
                         card.appendChild(modelDesc);
                         
-                        // 3. 规格列表
                         const modelSpecsDl = document.createElement('dl');
                         modelSpecsDl.className = 'mt-6 divide-y divide-gray-100';
                         
@@ -725,36 +723,28 @@
                         });
                         card.appendChild(modelSpecsDl);
 
-                        // 变更 (Request 2a, 2b): 注入案例介绍和图片占位符
                         const caseStudyHtml = `
                             <h5 class="mt-8 text-base font-semibold leading-6 text-gray-900">案例介绍</h5>
                             <p class="mt-2 text-sm text-gray-600">这里是关于 ${sub.model} 的简要案例介绍，描述了其在实际场景中的应用和成效。我们帮助客户实现了[具体成果]，部署在[具体场景]。</p>
                             <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <!-- 占位符 1 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
                                     <span class="text-sm text-gray-500">[案例图片 1]</span>
                                 </div>
-                                <!-- 占位符 2 -->
                                 <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
                                     <span class="text-sm text-gray-500">[案例图片 2]</span>
                                 </div>
                             </div>
                         `;
-                        // 仅为 OCP 产品添加案例介绍
                         if (!productId.startsWith('ocp')) {
                             card.insertAdjacentHTML('beforeend', caseStudyHtml);
                         }
-                        // --- 结束注入 ---
 
-
-                        // 4. 下载按钮 (或 "了解更多" 链接)
                         const downloadLink = document.createElement('a');
                         downloadLink.href = sub.drawing_url;
-                        // 变更: 为案例介绍的占位符增加上边距
                         downloadLink.className = 'mt-8 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
                         
                         let buttonText = '图纸下载 (.pdf)';
-                        let buttonIcon = `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l4.5 4.5a.75.75 0 001.06 0l4.5-4.5a.75.75 0 00-1.06-1.06L11.5 12.114V3.5A.75.75 0 0010 2.75zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" /></svg>`;
+                        let buttonIcon = `<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l-5.5 5.25a.75.75 0 001.06 0l4.5-4.5a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" /></svg>`;
 
                         if (productId === 'aios' || productId.startsWith('ocp')) {
                             buttonText = '了解更多';
@@ -762,7 +752,6 @@
                         }
                         
                         downloadLink.innerHTML = buttonIcon + " " + buttonText;
-                        
                         card.appendChild(downloadLink);
 
                         listContainer.appendChild(card);
@@ -770,12 +759,10 @@
                     
                     specsContainer.appendChild(listContainer);
                 } else {
-                    // 备用：如果 (data.sub_products) 也不存在
                     specsHeading.textContent = '规格';
                     specsContainer.innerHTML = '<p class="text-gray-500">暂无更多详细信息。</p>';
                 }
 
-                // 3. 打开 Modal
                 mainContent.classList.add('hidden');
                 header.classList.add('hidden');
                 footer.classList.add('hidden');
@@ -784,9 +771,6 @@
                 productModal.scrollTo(0, 0); 
             }
             
-            // --- 事件监听器 ---
-
-            // 1. 点击产品卡片 或 页脚链接 -> 直接打开规格页
             directSpecLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -798,23 +782,20 @@
                 });
             });
 
-            // 2. 在 Modal 中: 点击 "返回主页"
             if (backToMainBtn) {
                 backToMainBtn.addEventListener('click', hideProductModal);
             }
             
-            // 3. 移动菜单锚点链接 (确保滚动正确)
             mobileLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     if (mobileMenu) {
                         mobileMenu.classList.add('hidden');
                     }
-                    
                     const href = this.getAttribute('href');
                     if (href && href.startsWith('#')) {
                         e.preventDefault(); 
                         if (!productModal.classList.contains('hidden')) {
-                             hideProductModal();
+                            hideProductModal();
                         }
                         const targetId = href.substring(1);
                         const targetElement = document.getElementById(targetId);
@@ -831,7 +812,223 @@
                     }
                 });
             });
+        });
 
+        /* 多语言字典 + 切换逻辑 */
+        const translations = {
+            en: {
+                'nav.home': 'Home',
+                'nav.products': 'Products',
+                'nav.showroom': 'Digital Showroom',
+                'nav.partners': 'Partners',
+                'nav.contact': 'Contact',
+                'nav.login': 'Login →',
+                'hero.title': 'AxiomDeta: Powering the Future of AI',
+                'hero.subtitle': 'We provide end-to-end AI infrastructure solutions, from high-performance racks and power to air-cooled and liquid-cooled micro-modules and intelligent operation platforms.',
+                'hero.ctaPrimary': 'View Products',
+                'hero.ctaSecondary': 'Contact Us →',
+                'products.label': 'Product Center',
+                'products.title': 'AI Infrastructure',
+                'products.more': 'Learn more →',
+                'products.air.title': 'Air-cooled Micro-module Data Center',
+                'products.air.tag': 'Classic & reliable · Cost optimized',
+                'products.air.desc': 'Classic air-cooled design that balances performance and cost, suitable for a wide range of standard rooms and brownfield sites.',
+                'products.ocp.title': 'OCP Core Solutions',
+                'products.ocp.tag': '21" · DC Power · OCP Standard',
+                'products.ocp.desc': 'Full range of OCP-compliant components from racks and laminated busbars to power/BBU shelves, supporting both ORV3 (48V) and ORV2 (12V) architectures.',
+                'products.infra.title': 'General Physical Infrastructure & Accessories',
+                'products.infra.tag': 'Solid foundation · Reliable support',
+                'products.infra.desc': 'High-quality cabinets, power distribution, cooling, UPS and common accessories providing a robust physical foundation for your data center.',
+                'products.liquid.title': 'Liquid-cooled Modular Data Center',
+                'products.liquid.tag': 'Extreme density · High efficiency',
+                'products.liquid.desc': 'Designed for high-density computing, covering cold-plate, rear-door heat exchanger and single-phase immersion solutions to achieve leading PUE.',
+                'products.aios.title': 'AIOS (DCIM Platform)',
+                'products.aios.tag': 'Smart monitoring · Digital twin',
+                'products.aios.desc': 'An advanced DCIM and digital-twin platform providing integrated monitoring and management of both air-cooled and liquid-cooled systems.'
+            },
+            'zh-CN': {
+                'nav.home': '首页',
+                'nav.products': '产品中心',
+                'nav.showroom': '数字展厅',
+                'nav.partners': '合作伙伴',
+                'nav.contact': '联系我们',
+                'nav.login': '登录 →',
+                'hero.title': 'AxiomDeta：驱动未来AI',
+                'hero.subtitle': '我们提供端到端的AI算力基础设施解决方案，从机柜与供电到风冷/液冷微模块与智能操作平台，助您在AI时代保持领先。',
+                'hero.ctaPrimary': '浏览产品',
+                'hero.ctaSecondary': '联系我们 →',
+                'products.label': '产品中心',
+                'products.title': 'AI算力基础设施',
+                'products.more': '了解更多 →',
+                'products.air.title': '风冷式微模块数据中心',
+                'products.air.tag': '经典可靠 · 成本优化',
+                'products.air.desc': '经典风冷设计，兼顾性能与成本，适用于多种标准机房环境。',
+                'products.ocp.title': 'OCP 核心解决方案',
+                'products.ocp.tag': '21英寸 · 直流供电 · OCP标准',
+                'products.ocp.desc': '提供从机架、层压母线到电源/BBU壳体的OCP标准组件，支持ORV3 (48V)和ORV2 (12V)架构。',
+                'products.infra.title': '通用物理基础链路及配件',
+                'products.infra.tag': '坚实基础 · 可靠支撑',
+                'products.infra.desc': '提供数据中心所需的高质量机柜、配电、空调、UPS及常用配件，为算力设施打造稳固的物理底座。',
+                'products.liquid.title': '液冷式模块数据中心',
+                'products.liquid.tag': '极致密度 · 高效散热',
+                'products.liquid.desc': '专为高密度计算设计，涵盖冷板式、背门热交换及单相浸没式冷却方案，实现行业领先的PUE。',
+                'products.aios.title': 'AIOS (动环监控平台)',
+                'products.aios.tag': '智能监控 · 数字孪生',
+                'products.aios.desc': '先进的DCIM与数字孪生平台，实现风冷与液冷系统的综合监控和智能运维。'
+            },
+            'zh-TW': {
+                'nav.home': '首頁',
+                'nav.products': '產品中心',
+                'nav.showroom': '數位展廳',
+                'nav.partners': '合作夥伴',
+                'nav.contact': '聯絡我們',
+                'nav.login': '登入 →',
+                'hero.title': 'AxiomDeta：驅動未來 AI',
+                'hero.subtitle': '我們提供端到端的 AI 算力基礎設施方案，從機櫃與供電到風冷 / 液冷微模組與智慧運維平台，協助您在 AI 時代保持領先。',
+                'hero.ctaPrimary': '瀏覽產品',
+                'hero.ctaSecondary': '聯絡我們 →',
+                'products.label': '產品中心',
+                'products.title': 'AI 算力基礎設施',
+                'products.more': '瞭解更多 →',
+                'products.air.title': '風冷式微模組資料中心',
+                'products.air.tag': '經典可靠 · 成本優化',
+                'products.air.desc': '經典風冷架構，在效能與成本之間取得平衡，適用於多種標準機房與既有機房改造。',
+                'products.ocp.title': 'OCP 核心解決方案',
+                'products.ocp.tag': '21吋 · 直流供電 · OCP標準',
+                'products.ocp.desc': '提供符合 OCP 標準的機櫃、層壓匯流排與電源 / BBU 機箱，支援 ORV3 (48V) 和 ORV2 (12V) 架構。',
+                'products.infra.title': '通用物理基礎鏈路與配件',
+                'products.infra.tag': '穩固基礎 · 可靠支撐',
+                'products.infra.desc': '提供資料中心所需的高品質機櫃、配電、空調、UPS 與常用配件，構成穩定的物理底座。',
+                'products.liquid.title': '液冷式模組化資料中心',
+                'products.liquid.tag': '極致密度 · 高效能效',
+                'products.liquid.desc': '專為高密度運算設計，涵蓋冷板式、背門熱交換與單相浸沒式冷卻方案，實現領先業界的 PUE。',
+                'products.aios.title': 'AIOS (動環監控平台)',
+                'products.aios.tag': '智慧監控 · 數位孿生',
+                'products.aios.desc': '先進 DCIM 與數位孿生平台，整合風冷與液冷系統監控與智慧運維功能。'
+            },
+            ja: {
+                'nav.home': 'ホーム',
+                'nav.products': '製品',
+                'nav.showroom': 'デジタルショールーム',
+                'nav.partners': 'パートナー',
+                'nav.contact': 'お問い合わせ',
+                'nav.login': 'ログイン →',
+                'hero.title': 'AxiomDeta：AIインフラの未来を支える',
+                'hero.subtitle': '高性能ラックと電源から、空冷および液冷マイクロモジュール、インテリジェントな運用プラットフォームまで、AI時代のためのエンドツーエンドのインフラを提供します。',
+                'hero.ctaPrimary': '製品を見る',
+                'hero.ctaSecondary': 'お問い合わせ →',
+                'products.label': '製品センター',
+                'products.title': 'AIインフラストラクチャ',
+                'products.more': '詳細を見る →',
+                'products.air.title': '空冷マイクロモジュールデータセンター',
+                'products.air.tag': '実績ある設計 · 最適化されたTCO',
+                'products.air.desc': '性能とコストのバランスに優れたクラシックな空冷アーキテクチャで、標準サーバールームや既存サイトに最適です。',
+                'products.ocp.title': 'OCPコアソリューション',
+                'products.ocp.tag': '21\" · 直流電源 · OCP準拠',
+                'products.ocp.desc': 'ラックや積層バスバーから電源 / BBUシェルフまで、ORV3(48V)とORV2(12V)の両アーキテクチャをサポートするOCP準拠コンポーネントを提供します。',
+                'products.infra.title': '汎用物理インフラ・アクセサリ',
+                'products.infra.tag': '堅牢な基盤 · 信頼性の高いサポート',
+                'products.infra.desc': '高品質のラック、配電、空調、UPS、およびアクセサリにより、あらゆるデータセンターの物理基盤を構成します。',
+                'products.liquid.title': '液冷モジュール型データセンター',
+                'products.liquid.tag': '超高密度 · 高効率',
+                'products.liquid.desc': '高密度計算向けに設計され、冷板、リアドア熱交換器、単相浸漬冷却ソリューションにより、業界トップクラスのPUEを実現します。',
+                'products.aios.title': 'AIOS (DCIMプラットフォーム)',
+                'products.aios.tag': 'スマート監視 · デジタルツイン',
+                'products.aios.desc': '空冷および液冷システムを統合監視する高度なDCIMおよびデジタルツインプラットフォームです。'
+            },
+            ko: {
+                'nav.home': '홈',
+                'nav.products': '제품',
+                'nav.showroom': '디지털 쇼룸',
+                'nav.partners': '파트너',
+                'nav.contact': '문의하기',
+                'nav.login': '로그인 →',
+                'hero.title': 'AxiomDeta: AI 인프라의 미래를 가속',
+                'hero.subtitle': '고성능 랙과 전원, 공냉 및 액냉 마이크로 모듈, 지능형 운영 플랫폼까지 AI 시대를 위한 엔드투엔드 인프라를 제공합니다.',
+                'hero.ctaPrimary': '제품 보기',
+                'hero.ctaSecondary': '문의하기 →',
+                'products.label': '제품 센터',
+                'products.title': 'AI 인프라스트럭처',
+                'products.more': '자세히 보기 →',
+                'products.air.title': '공냉식 마이크로 모듈 데이터센터',
+                'products.air.tag': '검증된 설계 · 최적화된 TCO',
+                'products.air.desc': '성능과 비용의 균형이 우수한 클래식 공냉 아키텍처로, 표준 서버실 및 기존 사이트에 적합합니다.',
+                'products.ocp.title': 'OCP 코어 솔루션',
+                'products.ocp.tag': '21\" · 직류 전원 · OCP 표준',
+                'products.ocp.desc': '랙, 적층 버스바, 전원 / BBU 셸프까지 포함한 OCP 호환 구성 요소를 제공하며 ORV3(48V)와 ORV2(12V)를 모두 지원합니다.',
+                'products.infra.title': '일반 물리 인프라 및 액세서리',
+                'products.infra.tag': '탄탄한 기반 · 신뢰할 수 있는 지원',
+                'products.infra.desc': '고품질 랙, 전원 분배, 냉각, UPS 및 공통 액세서리를 제공하여 데이터센터의 견고한 물리적 기반을 형성합니다.',
+                'products.liquid.title': '액냉식 모듈형 데이터센터',
+                'products.liquid.tag': '초고밀도 · 고효율',
+                'products.liquid.desc': '고밀도 컴퓨팅을 위해 설계되었으며, 콜드플레이트, 리어도어 열교환기 및 단상 침지 냉각 솔루션으로 업계 최고 수준의 PUE를 제공합니다.',
+                'products.aios.title': 'AIOS (DCIM 플랫폼)',
+                'products.aios.tag': '스마트 모니터링 · 디지털 트윈',
+                'products.aios.desc': '공냉 및 액냉 시스템을 통합 모니터링하는 고급 DCIM 및 디지털 트윈 플랫폼입니다.'
+            },
+            es: {
+                'nav.home': 'Inicio',
+                'nav.products': 'Productos',
+                'nav.showroom': 'Sala digital',
+                'nav.partners': 'Socios',
+                'nav.contact': 'Contacto',
+                'nav.login': 'Iniciar sesión →',
+                'hero.title': 'AxiomDeta: Impulsando el futuro de la IA',
+                'hero.subtitle': 'Ofrecemos soluciones de infraestructura de IA de extremo a extremo, desde racks y potencia de alto rendimiento hasta micro-módulos de aire y líquido y plataformas inteligentes de operación.',
+                'hero.ctaPrimary': 'Ver productos',
+                'hero.ctaSecondary': 'Contáctanos →',
+                'products.label': 'Centro de productos',
+                'products.title': 'Infraestructura de IA',
+                'products.more': 'Más información →',
+                'products.air.title': 'Centro de datos micro-módulo de aire',
+                'products.air.tag': 'Diseño clásico · TCO optimizado',
+                'products.air.desc': 'Arquitectura clásica de refrigeración por aire que equilibra rendimiento y costo, ideal para salas estándar y sitios existentes.',
+                'products.ocp.title': 'Soluciones centrales OCP',
+                'products.ocp.tag': '21" · Potencia CC · Estándar OCP',
+                'products.ocp.desc': 'Gama completa de componentes compatibles con OCP, desde racks y barras colectoras laminadas hasta estanterías de potencia/BBU, compatibles con ORV3 (48V) y ORV2 (12V).',
+                'products.infra.title': 'Infraestructura física general y accesorios',
+                'products.infra.tag': 'Base sólida · Soporte confiable',
+                'products.infra.desc': 'Racks de alta calidad, distribución de potencia, refrigeración, UPS y accesorios comunes que proporcionan una base física robusta para su centro de datos.',
+                'products.liquid.title': 'Centro de datos modular de refrigeración líquida',
+                'products.liquid.tag': 'Densidad extrema · Alta eficiencia',
+                'products.liquid.desc': 'Diseñado para computación de alta densidad, cubre soluciones de placa fría, intercambiador de calor trasero e inmersión monofásica para lograr un PUE líder.',
+                'products.aios.title': 'AIOS (Plataforma DCIM)',
+                'products.aios.tag': 'Supervisión inteligente · Gemelo digital',
+                'products.aios.desc': 'Plataforma avanzada de DCIM y gemelo digital que ofrece supervisión y gestión integradas de sistemas de aire y refrigeración líquida.'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations.en;
+            if (lang === 'zh-CN' || lang === 'zh-TW') {
+                document.documentElement.lang = lang;
+            } else {
+                document.documentElement.lang = 'en';
+            }
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.remove('border-transparent','text-gray-500');
+                    btn.classList.add('border','text-gray-900');
+                } else {
+                    btn.classList.add('border-transparent','text-gray-500');
+                    btn.classList.remove('border','text-gray-900');
+                }
+            });
+            localStorage.setItem('axiom_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('axiom_lang') || 'en';
+            setLanguage(saved);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+            });
         });
     </script>
 
