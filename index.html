@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -141,9 +141,12 @@
                 <p class="mt-6 text-lg leading-8 text-gray-300" data-i18n="hero.subtitle">
                     We provide end-to-end AI infrastructure solutions, from high-performance racks and power to air-cooled and liquid-cooled micro-modules and intelligent operation platforms.
                 </p>
-                <div class="mt-10 flex items-center gap-x-6">
+                <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
                     <a href="#products" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" data-i18n="hero.ctaPrimary">
                         View Products
+                    </a>
+                    <a href="#hero" class="rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" data-i18n="hero.ctaShowroom">
+                        Digital Showroom
                     </a>
                     <a href="#contact" class="text-sm font-semibold leading-6 text-white" data-i18n="hero.ctaSecondary">
                         Contact Us →
@@ -247,7 +250,7 @@
                         <p class="mt-3 text-base text-gray-600" data-i18n="showroom.card.desc">
                             Visit our immersive digital showroom to explore the innovative design and performance of our micro-module data center solutions.
                         </p>
-                        <a href="https://www.720yun.com/t/0evkswmrrn2?scene_id=101833075" target="_blank" rel="noopener noreferrer"
+                        <a href="#hero"
                            class="mt-6 inline-block rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                            data-i18n="showroom.card.button">
                             Enter Digital Showroom
@@ -381,9 +384,12 @@
                     <p class="text-sm leading-6 text-gray-300" data-i18n="footer.about">
                         We bring leading-edge data center technologies to global AI and cloud customers.
                     </p>
+                    <!-- Updated Address Section -->
                     <p class="text-sm leading-6 text-gray-300" data-i18n="footer.address">
                         AxiomDeta (Singapore) Pte. Ltd.<br>
-                        Singapore
+                        Address: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br>
+                        <a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br>
+                        <a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>
                     </p>
                 </div>
                 <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
@@ -766,40 +772,9 @@
                         });
                         card.appendChild(modelSpecsDl);
 
-                        const caseStudyHtml = `
-                            <h5 class="mt-8 text-base font-semibold leading-6 text-gray-900">${i18nKey('modal.case.title')}</h5>
-                            <p class="mt-2 text-sm text-gray-600">${i18nKey('modal.case.desc').replace('{model}', sub.model)}</p>
-                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
-                                    <span class="text-sm text-gray-500">${i18nKey('modal.case.image1')}</span>
-                                </div>
-                                <div class="aspect-video w-full rounded-lg bg-gray-200 flex items-center justify-center shadow-inner">
-                                    <span class="text-sm text-gray-500">${i18nKey('modal.case.image2')}</span>
-                                </div>
-                            </div>
-                        `;
-                        if (productId !== 'ocp_solutions') {
-                            card.insertAdjacentHTML('beforeend', caseStudyHtml);
-                        }
+                        /* REMOVED PLACEHOLDER SECTION FOR CASE STUDY */
 
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = sub.drawing_url;
-                        downloadLink.className = 'mt-8 inline-flex items-center gap-x-2 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500';
-                        
-                        let buttonTextKey = 'modal.button.download';
-                        let iconPath = `<path fill-rule="evenodd" d="M10 2.75A.75.75 0 008.5 3.5v8.614L5.205 9.14a.75.75 0 00-1.06 1.06l-5.5 5.25a.75.75 0 001.06 0l4.5-4.5a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10zM3 15.25a.75.75 0 00-1.5 0v1.5c0 1.519 1.232 2.75 2.75 2.75h10.5A2.75 2.75 0 0018.5 16.75v-1.5a.75.75 0 00-1.5 0v1.5a1.25 1.25 0 01-1.25 1.25H4.25a1.25 1.25 0 01-1.25-1.25v-1.5z" clip-rule="evenodd" />`;
-                        if (productId === 'aios' || productId === 'ocp_solutions') {
-                            buttonTextKey = 'modal.button.more';
-                            iconPath = `<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L8.818 3.682a.75.75 0 011.06-1.06l5.5 5.25a.75.75 0 010 1.06l-5.5 5.25a.75.75 0 11-1.06-1.06l5.52-5.52H3.75A.75.75 0 013 10z" clip-rule="evenodd" />`;
-                        }
-                        
-                        downloadLink.innerHTML = `
-                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                ${iconPath}
-                            </svg>
-                            ${i18nKey(buttonTextKey)}
-                        `;
-                        card.appendChild(downloadLink);
+                        /* REMOVED DOWNLOAD LINK SECTION */
 
                         listContainer.appendChild(card);
                     });
@@ -873,6 +848,7 @@
                 'hero.title': 'AxiomDeta: Powering the Future of AI',
                 'hero.subtitle': 'We provide end-to-end AI infrastructure solutions, from high-performance racks and power to air-cooled and liquid-cooled micro-modules and intelligent operation platforms.',
                 'hero.ctaPrimary': 'View Products',
+                'hero.ctaShowroom': 'Digital Showroom',
                 'hero.ctaSecondary': 'Contact Us →',
                 'products.label': 'Product Center',
                 'products.title': 'AI Infrastructure',
@@ -914,7 +890,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': 'Submit',
                 'footer.about': 'We bring leading-edge data center technologies to global AI and cloud customers.',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nSingapore',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.<br>Address: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': 'Products',
                 'footer.col.partners': 'Useful Link',
                 'footer.col.company': 'Company',
@@ -945,6 +921,7 @@
                 'hero.title': 'AxiomDeta：驅動未來 AI',
                 'hero.subtitle': '我們提供端到端的 AI 算力基礎設施方案，從機櫃與供電到風冷 / 液冷微模組與智慧運維平台，協助您在 AI 時代保持領先。',
                 'hero.ctaPrimary': '瀏覽產品',
+                'hero.ctaShowroom': '數位展廳',
                 'hero.ctaSecondary': '聯絡我們 →',
                 'products.label': '產品中心',
                 'products.title': 'AI 算力基礎設施',
@@ -986,7 +963,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': '送出',
                 'footer.about': '我們將領先的資料中心技術帶給全球 AI 與雲端客戶。',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\n新加坡',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.<br>Address: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': '產品',
                 'footer.col.partners': '實用連結',
                 'footer.col.company': '公司',
@@ -1017,6 +994,7 @@
                 'hero.title': 'AxiomDeta：AIインフラの未来を支える',
                 'hero.subtitle': '高性能ラックと電源から、空冷および液冷マイクロモジュール、インテリジェント運用プラットフォームまで、AI 時代のためのエンドツーエンドインフラを提供します。',
                 'hero.ctaPrimary': '製品を見る',
+                'hero.ctaShowroom': 'デジタルショールーム',
                 'hero.ctaSecondary': 'お問い合わせ →',
                 'products.label': '製品センター',
                 'products.title': 'AIインフラストラクチャ',
@@ -1058,7 +1036,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': '送信',
                 'footer.about': '最先端のデータセンター技術を、世界中のAIおよびクラウド顧客へ提供します。',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nシンガポール',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nAddress: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': '製品',
                 'footer.col.partners': '有用なリンク',
                 'footer.col.company': '企業情報',
@@ -1089,6 +1067,7 @@
                 'hero.title': 'AxiomDeta: AI 인프라의 미래를 가속',
                 'hero.subtitle': '고성능 랙과 전원, 공냉 및 액냉 마이크로 모듈, 지능형 운영 플랫폼까지 AI 시대를 위한 엔드투엔드 인프라를 제공합니다.',
                 'hero.ctaPrimary': '제품 보기',
+                'hero.ctaShowroom': '디지털 쇼룸',
                 'hero.ctaSecondary': '문의하기 →',
                 'products.label': '제품 센터',
                 'products.title': 'AI 인프라스트럭처',
@@ -1130,7 +1109,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': '제출',
                 'footer.about': '최신 데이터센터 기술을 전 세계 AI 및 클라우드 고객에게 제공합니다.',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\n싱가포르',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nAddress: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': '제품',
                 'footer.col.partners': '유용한 링크',
                 'footer.col.company': '회사',
@@ -1161,6 +1140,7 @@
                 'hero.title': 'AxiomDeta: Impulsando el futuro de la IA',
                 'hero.subtitle': 'Ofrecemos soluciones de infraestructura de IA de extremo a extremo, desde racks y potencia de alto rendimiento hasta micro-módulos de aire y líquido y plataformas inteligentes de operación.',
                 'hero.ctaPrimary': 'Ver productos',
+                'hero.ctaShowroom': 'Sala digital',
                 'hero.ctaSecondary': 'Contáctanos →',
                 'products.label': 'Centro de productos',
                 'products.title': 'Infraestructura de IA',
@@ -1202,7 +1182,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': 'Enviar',
                 'footer.about': 'Llevamos tecnologías de centros de datos de vanguardia a clientes globales de IA y cloud.',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nSingapur',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nAddress: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': 'Productos',
                 'footer.col.partners': 'Enlaces útiles',
                 'footer.col.company': 'Empresa',
@@ -1223,7 +1203,7 @@
                 'modal.button.more': 'Más información',
                 'modal.nodata': 'No hay información adicional por el momento.'
             },
-            pt: { // 新增的葡萄牙语翻译
+            pt: {
                 'nav.home': 'Início',
                 'nav.products': 'Produtos',
                 'nav.showroom': 'Showroom Digital',
@@ -1233,6 +1213,7 @@
                 'hero.title': 'AxiomDeta: Potencializando o Futuro da IA',
                 'hero.subtitle': 'Fornecemos soluções completas de infraestrutura de IA, desde racks de alto desempenho e energia até microssoluções refrigeradas a ar e líquido e plataformas de operação inteligente.',
                 'hero.ctaPrimary': 'Ver Produtos',
+                'hero.ctaShowroom': 'Showroom Digital',
                 'hero.ctaSecondary': 'Contate-nos →',
                 'products.label': 'Centro de Produtos',
                 'products.title': 'Infraestrutura de IA',
@@ -1274,7 +1255,7 @@
                 'contact.form.message.placeholder': '',
                 'contact.form.submit': 'Enviar',
                 'footer.about': 'Trazemos tecnologias de ponta de data center para clientes globais de IA e nuvem.',
-                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nSingapura',
+                'footer.address': 'AxiomDeta (Singapore) Pte. Ltd.\nAddress: 71 Ayer Rajah Crescent, #02-01, Singapore 139951<br><a href="mailto:info@axiomDeta.com" class="hover:text-white">email : info@axiomDeta.com</a><br><a href="https://wa.me/6583785068" target="_blank" class="hover:text-white">whatsapp +6583785068</a>',
                 'footer.col.products': 'Produtos',
                 'footer.col.partners': 'Link útil',
                 'footer.col.company': 'Empresa',
@@ -1283,7 +1264,7 @@
                 'footer.link.showroom': 'Showroom Digital',
                 'footer.copy': '© 2024 AxiomDeta (Singapore) Pte. Ltd. Todos os direitos reservados.',
                 'modal.back': 'Voltar ao principal',
-                'modal.specs.default': 'Especificações do Produto',
+                'modal.specs.default': 'Especificaciones del Produto',
                 'modal.specs.software': 'Pacote de Software',
                 'modal.specs.accessories': 'Série de Acessórios',
                 'modal.specs.ocp': 'Especificações Nucleares',
@@ -1307,7 +1288,7 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
-                    el.textContent = dict[key];
+                    el.innerHTML = dict[key]; // 修正: 使用 innerHTML 解析 HTML 标签
                 }
             });
 
